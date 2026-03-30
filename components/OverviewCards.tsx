@@ -9,7 +9,7 @@ const OverviewCards = () => {
 
             <div className="grid grid-cols-4 gap-10">
                 {/* Facebook! */}
-                <Card>
+                <Card className='dark:bg-[#252A41] hover:dark:bg-[#3a4164]'>
                     <div className='flex flex-row justify-between items-center'>
                         <h5>Page Views</h5>
                         <img src="/images/icon-facebook.svg" alt="" />
@@ -22,7 +22,7 @@ const OverviewCards = () => {
                         </div>
                     </div>
                 </Card>
-                <Card>
+                <Card className='dark:bg-[#252A41] hover:dark:bg-[#3a4164]'>
                     <div className='flex flex-row justify-between items-center'>
                         <h5>Likes</h5>
                         <img src="/images/icon-facebook.svg" alt="" />
@@ -36,7 +36,7 @@ const OverviewCards = () => {
                     </div>
                 </Card>
                 {/* Instagram */}
-                <Card>
+                <Card className='dark:bg-[#252A41] hover:dark:bg-[#3a4164]'>
                     <div className='flex flex-row justify-between items-center'>
                         <h5>Likes</h5>
                         <img src="/images/icon-instagram.svg" alt="" />
@@ -49,8 +49,7 @@ const OverviewCards = () => {
                         </div>
                     </div>
                 </Card>
-               
-                <Card>
+                <Card className='dark:bg-[#252A41] hover:dark:bg-[#3a4164]'>
                     <div className='flex flex-row justify-between items-center'>
                         <h5>Profile Views</h5>
                         <img src="/images/icon-instagram.svg" alt="" />
@@ -64,7 +63,7 @@ const OverviewCards = () => {
                     </div>
                 </Card>
                 {/* twitter */}
-                <Card>
+                <Card className='dark:bg-[#252A41] hover:dark:bg-[#3a4164]'>
                     <div className='flex flex-row justify-between items-center'>
                         <h5>Retweets</h5>
                         <img src="/images/icon-twitter.svg" alt="" />
@@ -77,7 +76,7 @@ const OverviewCards = () => {
                         </div>
                     </div>
                 </Card>
-                <Card>
+                <Card className='dark:bg-[#252A41] hover:dark:bg-[#3a4164]'>
                     <div className='flex flex-row justify-between items-center'>
                         <h5>Likes</h5>
                         <img src="/images/icon-twitter.svg" alt="" />
@@ -91,7 +90,7 @@ const OverviewCards = () => {
                     </div>
                 </Card>
                 {/* youtube */}
-                <Card>
+                <Card className='dark:bg-[#252A41] hover:dark:bg-[#3a4164]'>
                     <div className='flex flex-row justify-between items-center'>
                         <h5>Likes</h5>
                         <img src="/images/icon-youtube.svg" alt="" />
@@ -104,7 +103,7 @@ const OverviewCards = () => {
                         </div>
                     </div>
                 </Card>
-                <Card>
+                <Card className='dark:bg-[#252A41] hover:dark:bg-[#3a4164]'>
                     <div className='flex flex-row justify-between items-center'>
                         <h5>Total Views</h5>
                         <img src="/images/icon-youtube.svg" alt="" />

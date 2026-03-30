@@ -30,7 +30,7 @@ const TitleCard = () => {
             <h1 className="text-3xl font-semibold dark:text-white">Social Media Dashboard</h1>
             <p className="dark:text-gray-400">Total Followers: {totalFollowers}</p>
           </div>
-          {/* <Card className="dark:bg-[#1F212E]">Im a vard</Card> */}
+
           <ToggleDarkMode />
         </main>
       </Card>
