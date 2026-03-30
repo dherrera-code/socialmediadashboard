@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 
 const ToggleDarkMode = () => {
 
-    const [lightModeBool, setLightModeBool] = useState(true)
+    const [lightModeBool, setLightModeBool] = useState(false)
 
     const handleToggleChange = () => {
         setLightModeBool(!lightModeBool)
