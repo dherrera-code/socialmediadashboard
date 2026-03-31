@@ -15,8 +15,3 @@ export interface DailyOverview {
 //     socialData: SocialOverall[] | null;
 //     setSocialData : ( socialData: SocialOverall[] | null) => void
 // }
-
-export interface ToggleDarkModeContextType {
-    darkMode: boolean;
-    setDarkMode: (darkMode: boolean ) => void
-}
