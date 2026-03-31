@@ -1,24 +1,30 @@
 'use client'
-import { Button, DarkThemeToggle, ToggleSwitch, useThemeMode } from 'flowbite-react'
+import { ToggleSwitch, createTheme } from 'flowbite-react'
 import { useTheme } from 'next-themes';
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const ToggleDarkMode = () => {
-    const { setTheme } = useTheme()
+    // const [lightMode, setlightMode] = useState<"light" | "dark" >("light")
+    const [isDarkOn, setIsDarkOn] = useState(true)
+    const { theme, setTheme } = useTheme()
 
-    // const handleTheme = (themeString: string) => {
-    //     setTheme(themeString)
-    //     console.log(themeString)
-    // }
+    const handleTheme = () => {
+        setTheme(theme === "light" ? "dark" : "light");
+
+        (theme == "light") ? setIsDarkOn(true) : setIsDarkOn(false)
+
+
+    }
 
     return (
         <div>
             <div className='flex flex-row'>
 
                 <label className='pe-3 text-black dark:text-white' htmlFor="toggleswitch">Dark Mode</label>
+                <ToggleSwitch className='' checked={isDarkOn} onChange={handleTheme} />
                 {/* <Button onClick={() => setTheme(theme === "light" ? "dark" : "light")} className=''>Toggle Mode Here</Button> */}
 
-                <Button onClick={() => setTheme("light")}>
+                {/* <Button onClick={() => setTheme("light")}>
                     Light
                 </Button>
                 <Button onClick={() => setTheme("dark")}>
@@ -26,10 +32,8 @@ const ToggleDarkMode = () => {
                 </Button>
                 <Button onClick={() => setTheme("system")}>
                     System
-                </Button>
-                <div className="bg-white dark:bg-black text-black dark:text-white p-4">
-                    Test block
-                </div>
+                </Button> */}
+
             </div>
 
 

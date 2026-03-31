@@ -31,7 +31,7 @@ const SocialCards = () => {
   }, [])
 
   return (
-    <div className="grid grid-cols-4 gap-10 z-10 ">
+    <div className="grid grid-cols-[repeat(auto-fit,_minmax(250px,_400fr))] gap-10 z-10 ">
 
       {data?.map((item, idx) => (
         <div key={idx} className={(item.socialMedia == "Instagram") ? "pt-1 h-5 bg-gradient-to-r from-[#FCB045] via-[#FD1D1D] to-[#833AB4] rounded-lg" : "pt-1"}>
