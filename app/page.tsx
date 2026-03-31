@@ -8,8 +8,8 @@ export default function Home() {
     <div className="overflow-hidden bg-zinc-50 font-sans dark:bg-[#1e202a]">
       
       <TitleCard />
-
-      <div className="relative -top-28 px-36">
+{/* px-10 sm:px-20 md:px-30 */}
+      <div className="relative -top-28 px-16 sm:px-26 md:px-36">
 
         {/* Social Platform Overall Stats */}
         <SocialCards />

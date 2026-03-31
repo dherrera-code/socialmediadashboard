@@ -10,20 +10,15 @@ const ToggleDarkMode = () => {
 
     const handleTheme = () => {
         setTheme(theme === "light" ? "dark" : "light");
-
-        (theme == "light") ? setIsDarkOn(true) : setIsDarkOn(false)
-
-
+        (theme == "dark") ? setIsDarkOn(true) : setIsDarkOn(false)
     }
 
     return (
         <div>
             <div className='flex flex-row'>
 
-                <label className='pe-3 text-black dark:text-white' htmlFor="toggleswitch">Dark Mode</label>
-                <ToggleSwitch className='' checked={isDarkOn} onChange={handleTheme} />
-                {/* <Button onClick={() => setTheme(theme === "light" ? "dark" : "light")} className=''>Toggle Mode Here</Button> */}
-
+                <label className='pe-3 text-black dark:text-gray-400' htmlFor="ToggleSwitch">Dark Mode</label>
+                <ToggleSwitch className='' color='lime' checked={isDarkOn} onChange={handleTheme} />
                 {/* <Button onClick={() => setTheme("light")}>
                     Light
                 </Button>
@@ -33,10 +28,7 @@ const ToggleDarkMode = () => {
                 <Button onClick={() => setTheme("system")}>
                     System
                 </Button> */}
-
             </div>
-
-
         </div>
     )
 }
