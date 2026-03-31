@@ -8,7 +8,7 @@ export interface SocialOverall {
 export interface DailyOverview {
     socialMedia: string,
     viewsOrLikes: string,
-    amount: number,
+    amounts: number,
     trendingPercentage: number
 }
 export interface SocialDataContextType {

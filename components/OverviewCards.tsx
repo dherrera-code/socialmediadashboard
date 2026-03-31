@@ -1,9 +1,23 @@
+"use client"
+import { DailyOverview } from '@/lib/interface'
+import { GetDailySocialStats } from '@/lib/service'
 import { Card } from 'flowbite-react'
-import React from 'react'
+import { useEffect, useState } from 'react'
 
 const OverviewCards = () => {
+    const [dailyData, setDailyData] = useState<DailyOverview[] | null>(null)
 
-    
+    const displayData = async () => {
+        const data = await GetDailySocialStats();
+
+        console.log(data);
+        setDailyData(data)
+    }
+
+    useEffect(() => {
+        displayData();
+    }, [])
+
     return (
 
         <div className="pt-12">
@@ -11,7 +25,24 @@ const OverviewCards = () => {
             {/* Map out our cards here! */}
             <div className="grid grid-cols-4 gap-10">
                 {/* Facebook! */}
-                <Card className='dark:bg-[#252A41] hover:dark:bg-[#3a4164]'>
+                {
+                    dailyData?.map((item, idx) => (
+                        <Card key={idx} className='dark:bg-[#252A41] hover:dark:bg-[#3a4164]'>
+                            <div className='flex flex-row justify-between items-center'>
+                                <h5>{item.viewsOrLikes}</h5>
+                                <img src={`/images/icon-${item.socialMedia}.svg`} alt={item.socialMedia + " icon!"} />
+                            </div>
+                            <div className='flex justify-between items-end'>
+                                <h5 className='text-3xl font-semibold'>{item.amounts}</h5>
+                                <div className='flex items-center gap-1 '>
+                                    <img className='w-2.5 h-fit' src={`/images/icon-${item.trendingPercentage > 0 ? "up" : "down"}.svg`} alt="Up Icon@" />
+                                    <p className={`text-[12px] ${item.trendingPercentage > 0 ? "text-green-400" : "text-red-600"} `}>{item.trendingPercentage > 0 ? item.trendingPercentage : item.trendingPercentage * -1 }%</p>
+                                </div>
+                            </div>
+                        </Card>
+                    ))
+                }
+                {/* <Card className='dark:bg-[#252A41] hover:dark:bg-[#3a4164]'>
                     <div className='flex flex-row justify-between items-center'>
                         <h5>Page Views</h5>
                         <img src="/images/icon-facebook.svg" alt="" />
@@ -37,7 +68,7 @@ const OverviewCards = () => {
                         </div>
                     </div>
                 </Card>
-                {/* Instagram */}
+
                 <Card className='dark:bg-[#252A41] hover:dark:bg-[#3a4164]'>
                     <div className='flex flex-row justify-between items-center'>
                         <h5>Likes</h5>
@@ -64,7 +95,7 @@ const OverviewCards = () => {
                         </div>
                     </div>
                 </Card>
-                {/* twitter */}
+
                 <Card className='dark:bg-[#252A41] hover:dark:bg-[#3a4164]'>
                     <div className='flex flex-row justify-between items-center'>
                         <h5>Retweets</h5>
@@ -91,7 +122,7 @@ const OverviewCards = () => {
                         </div>
                     </div>
                 </Card>
-                {/* youtube */}
+
                 <Card className='dark:bg-[#252A41] hover:dark:bg-[#3a4164]'>
                     <div className='flex flex-row justify-between items-center'>
                         <h5>Likes</h5>
@@ -117,7 +148,9 @@ const OverviewCards = () => {
                             <p className='text-green-400 text-[12px]'>3%</p>
                         </div>
                     </div>
-                </Card>
+                </Card> */}
+
+                
             </div>
         </div>
 
