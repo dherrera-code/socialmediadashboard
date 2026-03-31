@@ -36,7 +36,7 @@ const SocialCards = () => {
       {data?.map((item, idx) => (
         <div key={idx} className={(item.socialMedia == "Instagram") ? "pt-1 h-5 bg-gradient-to-r from-[#FCB045] via-[#FD1D1D] to-[#833AB4] rounded-lg" : "pt-1"}>
 
-          <Card className={`dark:bg-[#252A41] hover:dark:bg-[#3a4164] cursor-pointer ${handleSocialImage(item.socialMedia)}`}>
+          <Card className={`bg-[#F0F2FA] hover:bg-[#E1E4F0] dark:bg-[#252A41] hover:dark:bg-[#3a4164] cursor-pointer ${handleSocialImage(item.socialMedia)}`}>
             <div className="flex justify-center items-center">
               <img className="w-7" src={`/images/icon-${item.socialMedia}.svg`} alt={item.socialMedia + " Logo!"} />
               <p className="ps-3 text-sm dark:text-gray-400">{item.username}</p>

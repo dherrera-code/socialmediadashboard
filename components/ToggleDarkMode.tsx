@@ -1,28 +1,37 @@
 'use client'
-import { ToggleSwitch } from 'flowbite-react'
-import React, { useState } from 'react'
+import { Button, DarkThemeToggle, ToggleSwitch, useThemeMode } from 'flowbite-react'
+import { useTheme } from 'next-themes';
+import React, { useEffect, useState } from 'react'
 
 const ToggleDarkMode = () => {
+    const { setTheme } = useTheme()
 
-    const [lightModeBool, setLightModeBool] = useState(false)
-
-    const handleToggleChange = () => {
-        setLightModeBool(!lightModeBool)
-        console.log(lightModeBool)
-    }
+    // const handleTheme = (themeString: string) => {
+    //     setTheme(themeString)
+    //     console.log(themeString)
+    // }
 
     return (
         <div>
             <div className='flex flex-row'>
 
-                <label className='pe-3' htmlFor="toggleswitch">Dark Mode</label>
-                <ToggleSwitch className='' checked={lightModeBool} onChange={handleToggleChange} />
+                <label className='pe-3 text-black dark:text-white' htmlFor="toggleswitch">Dark Mode</label>
+                {/* <Button onClick={() => setTheme(theme === "light" ? "dark" : "light")} className=''>Toggle Mode Here</Button> */}
+
+                <Button onClick={() => setTheme("light")}>
+                    Light
+                </Button>
+                <Button onClick={() => setTheme("dark")}>
+                    Dark
+                </Button>
+                <Button onClick={() => setTheme("system")}>
+                    System
+                </Button>
+                <div className="bg-white dark:bg-black text-black dark:text-white p-4">
+                    Test block
+                </div>
             </div>
-            {/* <label className="inline-flex items-center cursor-pointer">
-                <input type="checkbox" value="" className="sr-only peer" />
-                <span className="select-none ms-3 text-sm font-medium text-heading">Dark Mode</span>
-                <div className="relative w-9 h-5 bg-neutral-quaternary peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-brand-soft dark:peer-focus:ring-brand-soft rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-buffer after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-brand"></div>
-            </label> */}
+
 
         </div>
     )

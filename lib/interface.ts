@@ -11,7 +11,12 @@ export interface DailyOverview {
     amounts: number,
     trendingPercentage: number
 }
-export interface SocialDataContextType {
-    socialData: SocialOverall[] | null;
-    setSocialData : ( socialData: SocialOverall[] | null) => void
+// export interface SocialDataContextType {
+//     socialData: SocialOverall[] | null;
+//     setSocialData : ( socialData: SocialOverall[] | null) => void
+// }
+
+export interface ToggleDarkModeContextType {
+    darkMode: boolean;
+    setDarkMode: (darkMode: boolean ) => void
 }
