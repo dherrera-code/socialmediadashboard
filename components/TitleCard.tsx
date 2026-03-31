@@ -1,8 +1,9 @@
-"use client"
+'use client'
 import { Card } from 'flowbite-react'
 import ToggleDarkMode from './ToggleDarkMode'
 import { GetMainSocialStats } from '@/lib/service'
 import { useEffect, useState } from 'react'
+
 
 const TitleCard = () => {
   const [totalFollowers, setTotalFollowers] = useState(0);
@@ -10,6 +11,7 @@ const TitleCard = () => {
   const displayData = async () => {
    const data = await GetMainSocialStats();
    console.log(data);
+
    let total = 0;
    for(let i = 0; i < data.length; i++){
     total += data[i].followerCount;
