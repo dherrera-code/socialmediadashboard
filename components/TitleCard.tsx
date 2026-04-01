@@ -3,21 +3,22 @@ import { Card } from 'flowbite-react'
 import ToggleDarkMode from './ToggleDarkMode'
 import { GetMainSocialStats } from '@/lib/service'
 import { useEffect, useState } from 'react'
+import { useSocialData } from '@/lib/context'
 
 
 const TitleCard = () => {
   const [totalFollowers, setTotalFollowers] = useState(0);
+  const {setSocialData} = useSocialData()
 
   const displayData = async () => {
    const data = await GetMainSocialStats();
-   console.log(data);
+   setSocialData(data)
 
    let total = 0;
    for(let i = 0; i < data.length; i++){
     total += data[i].followerCount;
    }
    setTotalFollowers(total);
-   console.log(total)
   }
 
   useEffect(() => {

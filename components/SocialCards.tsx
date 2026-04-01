@@ -1,16 +1,17 @@
 'use client'
+import { useSocialData } from '@/lib/context'
 import { SocialOverall } from '@/lib/interface'
-import { GetMainSocialStats } from '@/lib/service'
+
 import { Card } from 'flowbite-react'
 import { useEffect, useState } from 'react'
 
 const SocialCards = () => {
 
   const [data, setData] = useState<SocialOverall[] | null>(null)
+  const {socialData} = useSocialData();
 
   const getData = async () => {
-    const data = await GetMainSocialStats();
-    setData(data);
+    setData(socialData)
   }
 
   // create a function to test what social media is getting mapped out
@@ -27,10 +28,7 @@ const SocialCards = () => {
     let countString = count.toString()
 
     if(count > 10000){
-      console.log(countString)
-      // 10 000
       countString = countString.slice(0, countString.length - 3)
-      console.log(countString + "K")
       countString = countString + "k";
     }
     return countString;
@@ -38,8 +36,8 @@ const SocialCards = () => {
 
   useEffect(() => {
     getData();
-  }, [])
-
+  }, [socialData])
+        // grid grid-cols-[repeat(auto-fit,_minmax(250px,_400fr))] gap-5 sm:gap-10 z-10
   return (
     <div className="grid grid-cols-[repeat(auto-fit,_minmax(250px,_400fr))] gap-5 sm:gap-10 z-10 ">
 

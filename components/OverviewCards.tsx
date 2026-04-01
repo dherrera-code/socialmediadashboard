@@ -9,8 +9,6 @@ const OverviewCards = () => {
 
     const displayData = async () => {
         const data = await GetDailySocialStats();
-
-        console.log(data);
         setDailyData(data)
     }
 
