@@ -10,17 +10,15 @@ const SocialCards = () => {
 
   const getData = async () => {
     const data = await GetMainSocialStats();
-    console.log(data);
     setData(data);
-    console.log(data[0].username)
   }
 
   // create a function to test what social media is getting mapped out
   const handleSocialImage = (socialMedia: string) => {
 
-    if (socialMedia == "Facebook" || socialMedia == "Twitter") return "!border-blue-300 border-t-4 border-x-0 border-b-0"
+    if (socialMedia == "facebook" || socialMedia == "twitter") return "!border-blue-300 border-t-4 border-x-0 border-b-0"
 
-    if (socialMedia == "Youtube") return "border-t-4 border-x-0 border-b-0 !border-red-600"
+    if (socialMedia == "youtube") return "border-t-4 border-x-0 border-b-0 !border-red-600"
 
     return ""
 
@@ -34,7 +32,7 @@ const SocialCards = () => {
     <div className="grid grid-cols-[repeat(auto-fit,_minmax(250px,_400fr))] gap-10 z-10 ">
 
       {data?.map((item, idx) => (
-        <div key={idx} className={(item.socialMedia == "Instagram") ? "pt-1 h-5 bg-gradient-to-r from-[#FCB045] via-[#FD1D1D] to-[#833AB4] rounded-lg" : "pt-1"}>
+        <div key={idx} className={(item.socialMedia == "instagram") ? "pt-1 h-5 bg-gradient-to-r from-[#FCB045] via-[#FD1D1D] to-[#833AB4] rounded-lg" : "pt-1"}>
 
           <Card className={`bg-[#F0F2FA] hover:bg-[#E1E4F0] dark:bg-[#252A41] hover:dark:bg-[#3a4164] cursor-pointer ${handleSocialImage(item.socialMedia)}`}>
             <div className="flex justify-center items-center">
