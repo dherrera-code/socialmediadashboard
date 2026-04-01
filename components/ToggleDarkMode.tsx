@@ -17,11 +17,10 @@ const ToggleDarkMode = () => {
         toggle: {
             base: "relative flex items-center rounded-full bg-gray-200", // Off state background
             checked: {
-                on: "bg-linear-to-r from-blue-400  to-green-400 ", // Background color when ON
-                off: "bg-linear-to-r from-blue-400  to-green-400", // Background color when OFF
+                on: "bg-linear-to-r from-blue-400 to-green-400 after:bg-white", // Background color when ON
+                off: "bg-linear-to-r from-blue-400 to-green-400 after:bg-gray-700", // Background color when OFF
             },
-        },
-        handle: "bg-white peer-checked:bg-gray-500",
+        }
     };
 
     useEffect(() => {
@@ -32,8 +31,10 @@ const ToggleDarkMode = () => {
         <div>
             <div className='flex flex-row'>
 
+                <div className='flex flex-row items-center'>
                 <label className='pe-3 text-black dark:text-gray-400' htmlFor="ToggleSwitch">Dark Mode</label>
-                <ToggleSwitch className='' color='lime' theme={customTheme} checked={isDarkOn} onChange={handleTheme} />
+                <ToggleSwitch sizing='lg' color='lime' theme={customTheme} checked={isDarkOn} onChange={handleTheme} />
+                </div>
                 {/* <Button onClick={() => setTheme("light")}>
                     Light
                 </Button>

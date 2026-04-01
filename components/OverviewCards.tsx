@@ -21,12 +21,12 @@ const OverviewCards = () => {
     return (
 
         <div className="pt-12">
-            <h1 className="font-semibold text-3xl pb-5">Overview - Today</h1>
+            <h1 className="font-semibold text-gray-500 dark:text-white text-3xl pb-5">Overview - Today</h1>
             {/* Map out our cards here! */}
             <div className="grid grid-cols-[repeat(auto-fit,_minmax(250px,_400fr))] gap-10">
                 {
                     dailyData?.map((item, idx) => (
-                        <Card key={idx} className='bg-[#F0F2FA] hover:bg-[#E1E4F0] dark:bg-[#252A41] hover:dark:bg-[#3a4164]'>
+                        <Card key={idx} className='bg-[#F0F2FA] hover:bg-[#E1E4F0] dark:bg-[#252A41] hover:dark:bg-[#3a4164] shadow-none'>
                             <div className='flex flex-row justify-between items-center'>
                                 <h5>{item.viewsOrLikes}</h5>
                                 <img src={`/images/icon-${item.socialMedia}.svg`} alt={item.socialMedia + " icon!"} />

@@ -46,10 +46,10 @@ const SocialCards = () => {
       {data?.map((item, idx) => (
         <div key={idx} className={(item.socialMedia == "instagram") ? "pt-1 h-5 bg-gradient-to-r from-[#FCB045] via-[#FD1D1D] to-[#833AB4] rounded-lg" : "pt-1"}>
 
-          <Card className={`bg-[#F0F2FA] hover:bg-[#E1E4F0] dark:bg-[#252A41] hover:dark:bg-[#3a4164] cursor-pointer ${handleSocialImage(item.socialMedia)}`}>
+          <Card className={`bg-[#F0F2FA] hover:bg-[#E1E4F0] dark:bg-[#252A41] hover:dark:bg-[#3a4164] cursor-pointer shadow-none ${handleSocialImage(item.socialMedia)}`}>
             <div className="flex justify-center items-center">
-              <img className="w-7" src={`/images/icon-${item.socialMedia}.svg`} alt={item.socialMedia + " Logo!"} />
-              <p className="ps-3 text-sm dark:text-gray-400">{item.username}</p>
+              <img className="w-6" src={`/images/icon-${item.socialMedia}.svg`} alt={item.socialMedia + " Logo!"} />
+              <p className="ps-3 text-sm text-gray-600 dark:text-gray-400">{item.username}</p>
             </div>
             <div className="flex flex-col justify-center items-center py-2">
               <h1 className="text-6xl font-bold">{handleFollowerCount(item.followerCount)}</h1>
