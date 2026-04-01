@@ -39,7 +39,7 @@ const SocialCards = () => {
   }, [socialData])
         // grid grid-cols-[repeat(auto-fit,_minmax(250px,_400fr))] gap-5 sm:gap-10 z-10
   return (
-    <div className="grid grid-cols-[repeat(auto-fit,_minmax(250px,_400fr))] gap-5 sm:gap-10 z-10 ">
+    <div className="grid grid-cols-[repeat(auto-fit,_minmax(220px,_1fr))] gap-5 sm:gap-10 z-10 ">
 
       {data?.map((item, idx) => (
         <div key={idx} className={(item.socialMedia == "instagram") ? "pt-1 mb-1 bg-gradient-to-r from-[#FCB045] via-[#FD1D1D] to-[#833AB4] rounded-lg" : "pt-1"}>
