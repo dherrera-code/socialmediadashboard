@@ -14,4 +14,4 @@ This application uses an API to receive random data and map that data into the w
 ## Notes:
 Need to create useContext to use the same data for total followers count And the Main content!
 
-### Peer Review (): 
+### Peer Review (Joseph D): great Job DanTheMan! the project looks just like the figma, i really like how you made it randomly generates the info on the cards.
