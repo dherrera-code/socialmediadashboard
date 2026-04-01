@@ -28,24 +28,19 @@ const ToggleDarkMode = () => {
     })
 
     return (
-        <div>
-            <div className='flex flex-row'>
 
-                <div className='flex flex-row items-center'>
-                <label className='pe-3 text-black dark:text-gray-400' htmlFor="ToggleSwitch">Dark Mode</label>
-                <ToggleSwitch sizing='lg' color='lime' theme={customTheme} checked={isDarkOn} onChange={handleTheme} />
+        <div>
+
+            <hr className='md:hidden display mt-5 ' />
+            <div className='flex sm:pt-5 justify-between md:justify-end'>
+
+                <label className='sm:pe-3  text-black dark:text-gray-400' htmlFor="ToggleSwitch">Dark Mode</label>
+                <div className=''>
+                    <ToggleSwitch sizing='lg' color='lime' theme={customTheme} checked={isDarkOn} onChange={handleTheme} />
                 </div>
-                {/* <Button onClick={() => setTheme("light")}>
-                    Light
-                </Button>
-                <Button onClick={() => setTheme("dark")}>
-                    Dark
-                </Button>
-                <Button onClick={() => setTheme("system")}>
-                    System
-                </Button> */}
             </div>
         </div>
+        
     )
 }
 

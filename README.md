@@ -6,15 +6,9 @@
 
 https://socialmediadashboard-peach.vercel.app/
 
-## 03/30/2026
+## 04/01/2026
 
 ## Description
-
-### Notes:
-
-Front-end: 
-Implement a toggle light mode and dark mode!
-Connect API endpoint to make front-end functional!
-Ensure responsiveness toward build!
+This application uses an API to receive random data and map that data into the website interface. This also has a functional dark mode feature and is responsive for mobile!
 
 ### Peer Review (): 

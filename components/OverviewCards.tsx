@@ -23,7 +23,7 @@ const OverviewCards = () => {
         <div className="pt-12">
             <h1 className="font-semibold text-gray-500 dark:text-white text-3xl pb-5">Overview - Today</h1>
             {/* Map out our cards here! */}
-            <div className="grid grid-cols-[repeat(auto-fit,_minmax(250px,_400fr))] gap-10">
+            <div className="grid grid-cols-[repeat(auto-fit,_minmax(250px,_400fr))] gap-5 sm:gap-10">
                 {
                     dailyData?.map((item, idx) => (
                         <Card key={idx} className='bg-[#F0F2FA] hover:bg-[#E1E4F0] dark:bg-[#252A41] hover:dark:bg-[#3a4164] shadow-none'>

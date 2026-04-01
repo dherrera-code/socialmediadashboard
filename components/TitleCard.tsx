@@ -27,13 +27,14 @@ const TitleCard = () => {
   return (
     
     <Card className="rounded-t-none rounded-b-3xl pb-30 -z-10 shadow-3xs bg-slate-100">
-        <main className="flex flex-col sm:flex-row justify-start sm:justify-between items-center  pt-4 px-10 sm:px-20 md:px-30">
+        <main className="grid grid-cols-1 md:grid-cols-2 pt-4 px-10 sm:px-20 md:px-30">
           <div>
             <h1 className="text-3xl font-semibold dark:text-white">Social Media Dashboard</h1>
             <p className="dark:text-gray-400">Total Followers: {totalFollowers}</p>
           </div>
-            
+
           <ToggleDarkMode />
+
         </main>
       </Card>
   )
