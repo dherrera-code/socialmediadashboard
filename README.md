@@ -11,4 +11,7 @@ https://socialmediadashboard-peach.vercel.app/
 ## Description
 This application uses an API to receive random data and map that data into the website interface. This also has a functional dark mode feature and is responsive for mobile!
 
+## Notes:
+Need to create useContext to use the same data for total followers count And the Main content!
+
 ### Peer Review (): 
